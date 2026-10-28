@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fuchsia-pydap"
+version = "0.1.0"
+description = "Fuchsia's Python Debug Adapter Protocol client"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [{ name = "The Fuchsia Authors" }]
+dependencies = ["pydantic>=2,<3"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pydap"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
